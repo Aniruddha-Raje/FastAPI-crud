@@ -1,12 +1,11 @@
-from pydantic import BaseSettings
+# app/core/config.py
 
-class Settings(BaseSettings):
-    DATABASE_URL: str
-    PROJECT_NAME: str = "FastAPI App"
-    ALLOWED_ORIGINS: list[str] = ["*"]
-    APP_VERSION: str = "1.0.0"
+import os
+from dotenv import load_dotenv
 
-    class Config:
-        env_file = ".env"
+# Load from .env file
+load_dotenv()
 
-settings = Settings()
+# Read environment variables
+DATABASE_URL = os.getenv("DATABASE_URL")
+APP_VERSION = os.getenv("APP_VERSION", "1.0.0")  # default if not set

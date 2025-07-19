@@ -1,5 +1,7 @@
 fastapi
-uvicorn[standard]
-sqlalchemy[asyncio]
-asyncpg
+uvicorn
+sqlalchemy
+psycopg2-binary
 python-dotenv
+pydantic
+requests

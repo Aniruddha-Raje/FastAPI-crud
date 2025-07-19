@@ -1,5 +1,5 @@
 from fastapi import APIRouter, status
-from app.core.config import settings
+from app.core.config import APP_VERSION
 
 router = APIRouter()
 
@@ -19,4 +19,4 @@ def healthcheck():
     description="Returns the current version of the application"
 )
 def version():
-    return {"version": settings.APP_VERSION}
+    return {"version": APP_VERSION}
