@@ -48,15 +48,15 @@ DATABASE_URL=postgresql+asyncpg://your_user:your_password@localhost/your_db
 
 | Method | Endpoint                       | Description              |
 | ------ | ------------------------------ | ------------------------ |
-| GET    | `/api/v1/healthcheck`          | Health check             |
-| GET    | `/api/v1/version`              | Returns app version      |
-| GET    | `/api/v1/users`                | List all users           |
-| POST   | `/api/v1/users`                | Create a new user        |
-| GET    | `/api/v1/users/{id}`           | Get a user by ID         |
-| DELETE | `/api/v1/users/{id}`           | Delete a user            |
-| GET    | `/api/v1/posts`                | List all posts           |
-| POST   | `/api/v1/posts?user_id={user}` | Create a post for a user |
-| GET    | `/api/v1/profiles/{user_id}`   | Get profile by user ID   |
+| GET    | `/api/healthcheck`          | Health check             |
+| GET    | `/api/version`              | Returns app version      |
+| GET    | `/api/users`                | List all users           |
+| POST   | `/api/users`                | Create a new user        |
+| GET    | `/api/users/{id}`           | Get a user by ID         |
+| DELETE | `/api/users/{id}`           | Delete a user            |
+| GET    | `/api/posts`                | List all posts           |
+| POST   | `/api/posts?user_id={user}` | Create a post for a user |
+| GET    | `/api/profiles/{user_id}`   | Get profile by user ID   |
 
 # 📜 Swagger UI
 Once the app is running, visit:

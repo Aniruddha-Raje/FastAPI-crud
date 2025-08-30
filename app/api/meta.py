@@ -1,5 +1,6 @@
 from fastapi import APIRouter, status
 from app.core.config import APP_VERSION
+from app.schemas.response import APIResponse
 
 router = APIRouter()
 
@@ -10,7 +11,7 @@ router = APIRouter()
     description="Simple health check endpoint to verify if the service is up"
 )
 def healthcheck():
-    return {"status": "ok"}
+    return APIResponse(success=True, message="", data={"status": "ok"}).model_dump()
 
 @router.get(
     "/version",
@@ -19,4 +20,4 @@ def healthcheck():
     description="Returns the current version of the application"
 )
 def version():
-    return {"version": APP_VERSION}
+    return APIResponse(success=True, message="", data={"version": APP_VERSION}).model_dump()
