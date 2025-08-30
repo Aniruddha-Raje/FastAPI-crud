@@ -66,3 +66,8 @@ http://localhost:8000/redoc – ReDoc documentation
 
 # 🛠 Developer Scripts
 uvicorn app.main:app --reload
+
+# Migrations
+alembic revision --autogenerate -m "Initial migration"
+
+alembic upgrade head
